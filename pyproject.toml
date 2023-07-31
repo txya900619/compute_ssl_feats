@@ -8,7 +8,7 @@ version = "0.0.1"
 authors = [
   { name="Li Wei Chen", email="wayne900619@gmail.com" },
 ]
-description = "A kaldi compute-mfcc-feats replacement with ssl"
+description = "A kaldi compute-mfcc-feats replacement with ssl model"
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
