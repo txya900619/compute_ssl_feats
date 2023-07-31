@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compute_ssl_feats"
+version = "0.0.1"
+authors = [
+  { name="Li Wei Chen", email="wayne900619@gmail.com" },
+]
+description = "A kaldi compute-mfcc-feats replacement with ssl"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+compute-ssl-feats = "compute_ssl_feats.cli:entrypoint"
