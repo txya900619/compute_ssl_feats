@@ -1,4 +1,3 @@
-import soundfile
 import kaldiio
 
 class FileReader:
@@ -15,17 +14,6 @@ class FileReader:
             )
 
     def __iter__(self):
-        if self.ark_or_scp == "scp":
-            with open(self.filepath, "r", encoding="utf-8") as f:
-                for line in f:
-                    key, sound_file_path = line.rstrip().split(None, 1)
-                    # Assume PCM16
-                    array, rate = soundfile.read(sound_file_path, dtype="int16")
-                    # Change Tuple[ndarray, int] -> Tuple[int, ndarray]
-                    # (soundfile style -> scipy style)
-                    yield key, (rate, array)
-        else:
-            with kaldiio.ReadHelper(self.rspecifier) as reader:
-                for key, array in reader:
-                    yield key, array
-
+        with kaldiio.ReadHelper(self.rspecifier) as reader:
+            for key, array in reader:
+                yield key, array
