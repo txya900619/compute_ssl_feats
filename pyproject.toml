@@ -18,7 +18,7 @@ dependencies = [
   "str2bool ~= 1.1",
   "kaldiio ~= 2.18.0",
   "soundfile ~= 0.12.1",
-  "numpy ~= 1.25.1",
+  "numpy >= 1.24",
   "transformers[torch] ~= 4.31.0",
   "torch ~= 1.13.1", 
 ]
