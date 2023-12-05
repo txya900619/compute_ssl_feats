@@ -4,7 +4,7 @@ A kaldi compute-mfcc-feats replacement with ssl model
 ## install
 ```bash
 git clone git@github.com:txya900619/compute_ssl_feats.git
-cd  compute_ssl_feats & pip install -e .
+cd compute_ssl_feats & pip install -e .
 ```
 
 ## Usage
